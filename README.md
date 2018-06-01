@@ -1,2 +1,2 @@
 # grid-css
-It is a modified version of Brad Travery's Grid CSS example
+It is a work in progress modified version of Brad Travery's Grid CSS example
