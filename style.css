@@ -12,6 +12,8 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   font-size: 18px;
+  /* Remove the x-axis scroll bar */
+  overflow-x: hidden;
 }
 body {
   background: #F7F7F7;
@@ -121,7 +123,6 @@ img {
   font-size: 2.5rem;
 }
 /* Cards */
-
 .cards {
 
 }
@@ -132,22 +133,19 @@ img {
   box-shadow: var(--shadow);
 }
 /* About */
-
 .about {
   background: var(--primary);
   box-shadow: var(--shadow);
   padding: 3rem;
 }
 /* Portfolio */
-
 .portfolio {
 }
 .portfolio img {
   width: 100%;
   box-shadow: var(--shadow);
 }
-/* contact-box */
-
+/* Contact */
 .contact-box {
 
 }
@@ -198,7 +196,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-
+/* Screens bigger than 540px */
 @media screen and (min-width: 30rem) {
   .main-nav ul {
     display: flex;
@@ -212,11 +210,16 @@ footer {
     text-align: center;
   }
 }
-
+/* Screens bigger than 1080px */
 @media screen and (min-width: 60rem) {
   /* Split the about content into two */
   .about-content {
     columns: 2;
     column-gap: 2rem;
   }
+}
+
+/* CSS Grid */
+@supports (grid-area: auto) {
+
 }
