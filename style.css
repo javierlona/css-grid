@@ -17,31 +17,28 @@ html {
 }
 body {
   background: #F7F7F7;
-  margin: 2rem 1.5rem;
   line-height: 1.4;
 }
-ul {
-  list-style: none;
-  padding: 0;
-}
 .site {
-  max-width: 1280px;
   margin: 0 auto;
+  padding: .5rem;
   display: grid;
   grid-template-columns: 1fr; 
   grid-template-rows: 1fr;
   grid-template-areas: 
-    "company-name"
-    "menu-section"
-    "top-container"
-    "sidebar"
-    "cards"
-    "about"
-    "portfolio"
-    "contact-info"
-    "contact-form"
-    "footer-content";
+  "company-name"
+  "menu-section"
+  "top-container"
+  "sidebar"
+  "cards"
+  "about"
+  "portfolio"
+  "contact-info"
+  "contact-form"
+  "footer-content" 
+  ;
 }
+
 /* Navigation */
 .menu-section {
   padding: .5rem 0;
@@ -105,7 +102,6 @@ ul {
 }
 /* Showcase */
 .showcase {
-
   min-height: 400px;
   background: url(https://image.ibb.co/kYJK8x/showcase.jpg);
   background-size: cover;
@@ -194,13 +190,13 @@ ul {
 @media screen and (min-width: 40rem) {
   .portfolio-items {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
   }
 }
 @media screen and (min-width: 60rem) {
   .portfolio-items {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   /* Span two rows & columns rule */
   .double {
@@ -236,7 +232,6 @@ ul {
 
 }
 .contact-form form button, .contact-form form input, .contact-form form textarea {
-  width: 100%;
   padding: 1em 0 1em .5em;
   color: var(--text);
   border: 1px solid var(--dark);
@@ -286,6 +281,34 @@ ul {
 }
 
 /* CSS Grid */
-/* @supports (grid-area: auto) {
-
-} */
+@supports (grid-area: auto) {
+  @media screen and (min-width: 40rem) {
+    .site {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+        "company-name company-name"
+        "menu-section menu-section"
+        "top-container sidebar"
+        "cards cards"
+        "about about"
+        "portfolio portfolio"
+        "contact-info contact-form"
+        "footer-content footer-content";
+    }
+  }
+  @media screen and (min-width: 60rem) {
+    .site {
+      max-width: 1280px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+        "company-name company-name company-name company-name"
+        "menu-section menu-section menu-section menu-section"
+        "top-container top-container top-container top-container"
+        "cards cards cards cards"
+        "about about about sidebar"
+        "portfolio portfolio portfolio portfolio"
+        "contact-info contact-info contact-form contact-form"
+        "footer-content footer-content footer-content footer-content";
+    }
+  }
+}
