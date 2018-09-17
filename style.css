@@ -76,10 +76,6 @@ ul {
   text-decoration: none;
   border: 0;
 }
-/* Images */
-img {
-  max-width: 100%;
-}
 /* Company Name */
 .company-name {
   background: var(--dark);
@@ -100,7 +96,6 @@ img {
   color: var(--light);
 }
 /* Top Container */
-
 .top-container {
   grid-area: top-container;
 }
@@ -109,7 +104,6 @@ img {
   grid-area: sidebar;
 }
 /* Showcase */
-
 .showcase {
 
   min-height: 400px;
@@ -130,7 +124,6 @@ img {
   color: var(--light);
 }
 /* Top Box */
-
 .top-box {
   background: var(--primary);
   box-shadow: var(--shadow);
@@ -193,9 +186,27 @@ img {
 .portfolio {
   grid-area: portfolio;
 }
-.portfolio img {
-  width: 100%;
-  box-shadow: var(--shadow);
+.portfolio-items {
+	/* margin: 1em; */
+	padding: 0;
+	list-style-type: none;
+}
+@media screen and (min-width: 40rem) {
+  .portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+  }
+}
+@media screen and (min-width: 60rem) {
+  .portfolio-items {
+    grid-template-columns: repeat(4,1fr);
+  }
+  /* Span two rows & columns rule */
+  .double {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
 /* Contact */
 .contact-info {
@@ -275,6 +286,6 @@ img {
 }
 
 /* CSS Grid */
-@supports (grid-area: auto) {
+/* @supports (grid-area: auto) {
 
-}
+} */
