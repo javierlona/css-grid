@@ -27,11 +27,26 @@ ul {
 .site {
   max-width: 1280px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "company-name"
+    "menu-section"
+    "top-container"
+    "sidebar"
+    "cards"
+    "about"
+    "portfolio"
+    "contact-info"
+    "contact-form"
+    "footer-content";
 }
 /* Navigation */
 .menu-section {
   padding: .5rem 0;
   margin: .5rem 0;
+  grid-area: menu-section;
 }
 .main-nav ul {
   list-style-type: none;
@@ -71,6 +86,7 @@ img {
   box-shadow: var(--shadow);
   padding: 1rem;
   text-align: center;
+  grid-area: company-name;
 }
 .company-name h1 {
   font-size: 2rem;
@@ -86,10 +102,11 @@ img {
 /* Top Container */
 
 .top-container {
-
+  grid-area: top-container;
 }
 .sidebar {
   text-align: center;
+  grid-area: sidebar;
 }
 /* Showcase */
 
@@ -123,6 +140,9 @@ img {
   font-size: 2.5rem;
 }
 /* Cards */
+.cards {
+  grid-area: cards;
+}
 .card:last-of-type {
   margin-bottom: 1rem;
 }
@@ -142,7 +162,7 @@ img {
   padding-top: 1rem;
 }
 /* Flexbox Stuff */
-@media screen and (min-width: 30rem) {
+@media screen and (min-width: 40rem) {
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -167,19 +187,21 @@ img {
   background: var(--primary);
   box-shadow: var(--shadow);
   padding: 3rem;
+  grid-area: about;
 }
 /* Portfolio */
 .portfolio {
+  grid-area: portfolio;
 }
 .portfolio img {
   width: 100%;
   box-shadow: var(--shadow);
 }
 /* Contact */
-.contact-box {
-
-}
 .contact-info {
+  grid-area: contact-info;
+}
+.contact-info, .contact-form {
   background: var(--primary);
   text-align: center;
   padding: 1.5rem 2rem;
@@ -190,44 +212,47 @@ img {
   margin: 0 0 1rem 0;
 }
 /* FORM STYLES */
-
-.contact-info form label {
+.contact-form {
+  grid-area: contact-form;
+}
+.contact-form form label {
   display: block;
 }
-.contact-info form p {
+.contact-form form p {
   margin: 0;
 }
-.contact-info form .full {
+.contact-form form .full {
 
 }
-.contact-info form button, .contact-info form input, .contact-info form textarea {
+.contact-form form button, .contact-form form input, .contact-form form textarea {
   width: 100%;
   padding: 1em 0 1em .5em;
   color: var(--text);
   border: 1px solid var(--dark);
 }
-.contact-info form button {
+.contact-form form button {
   background: var(--dark);
   border: 0;
   color: var(--light);
   text-transform: uppercase;
 }
-.contact-info form button:hover, .contact-info form button:focus {
+.contact-form form button:hover, .contact-form form button:focus {
   background: var(--dark);
   color: var(--text);
   outline: 0;
   transition: background-color 2s ease-out;
 }
 /* Footer */
-footer {
+.footer-content {
   margin-top: 2rem;
   background: var(--dark);
   color: var(--light);
   text-align: center;
   padding: 1rem;
+  grid-area: footer-content;
 }
 /* Screens bigger than 540px */
-@media screen and (min-width: 30rem) {
+@media screen and (min-width: 40rem) {
   .main-nav ul {
     display: flex;
     flex-wrap: wrap;
