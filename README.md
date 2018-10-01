@@ -1,2 +1,8 @@
 # grid-css
-It is a work in progress modified version of Brad Travery's Grid CSS example
+![Demo Image](img/demo.jpg)
+
+## Live Demo
+[Click for a Live Demo Here](http://onegreatapp.com/1/)
+
+## Description
+A one-page website built using CSS Grid.
