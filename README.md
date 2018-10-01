@@ -6,3 +6,6 @@
 
 ## Description
 A one-page website built using CSS Grid.
+
+## Technologies
+CSS Grid, HTML
