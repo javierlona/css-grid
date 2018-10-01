@@ -1,4 +1,4 @@
-# grid-css
+# css-grid
 ![Demo Image](img/demo.jpg)
 
 ## Live Demo
