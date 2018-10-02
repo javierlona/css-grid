@@ -21,12 +21,15 @@ ul {
   list-style: none;
   padding: 0;
 }
+/* img {
+  width: 100%;
+} */
 .top-banner {
   top: 0;
   width: 100%;
   left: 0;
   margin: 0;
-  font-size: .8em;
+  font-size: .8rem;
   text-align: center;
   display: block;
   color: var(--dark);
@@ -113,11 +116,11 @@ ul {
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   box-shadow: var(--shadow);
 }
-.showcase h1 {
+.showcase h2 {
   font-size: 4rem;
   margin-bottom: 0;
   color: var(--light);
@@ -170,6 +173,11 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
 }
+iframe {
+  width: 100%;
+  border: 0;
+  height: 315px;
+}
 /* Portfolio */
 
 .portfolio {
@@ -194,24 +202,20 @@ ul {
   padding: 1.5rem 2rem;
   box-shadow: var(--shadow);
 }
-.company-info h3, .company-info ul {
-  text-align: center;
-  margin: 0 0 1rem 0;
-}
 /* FORM STYLES */
-.contact form button, .contact form input, .contact form textarea {
+form button, form input, form textarea {
   width: 100%;
-  padding: 1em 0 1em .5em;
+  padding: 1rem 0 1rem .5rem;
   color: var(--text);
   border: 1px solid var(--dark);
 }
-.contact form button {
+form button {
   background: var(--dark);
   border: 0;
   color: var(--light);
   text-transform: uppercase;
 }
-.contact form button:hover, .contact form button:focus {
+form button:hover, form button:focus {
   background: var(--dark);
   color: var(--text);
   outline: 0;
@@ -222,7 +226,7 @@ ul {
   left: auto;
   right: 2%;
   width: 50px;
-  font-size: .8em;
+  font-size: .8rem;
   color: var(--dark);
   position: fixed;
 }
@@ -246,7 +250,7 @@ footer {
     'showcase showcase' 
     'top-box-a top-box-b';
   }
-  .showcase h1 {
+  .showcase h2 {
     font-size: 2.5rem;
   }
   .main-nav ul {
